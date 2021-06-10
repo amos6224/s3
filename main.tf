@@ -1,11 +1,3 @@
-terraform {
-  required_version = ">= 0.12"
-}
-
-provider "aws" {
-   region = var.region
-}
-
 resource "aws_kms_key" "key" {
     description = "key to encrypt bucket"
     policy      = jsonencode(
